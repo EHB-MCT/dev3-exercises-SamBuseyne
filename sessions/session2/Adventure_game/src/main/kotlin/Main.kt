@@ -8,17 +8,25 @@ fun challengeOne(){
     val correctAnswers = setOf<String>("Lannister","Targaryen", "Stark")
     val userAnswer = readLine()
     if(correctAnswers.contains(userAnswer)){
-        succes()
+        challengeTwo()
     }else{
         gameOver()
     }
 }
 
-fun succes(){
-    println("You are lucky!!")
+fun challengeTwo(){
+    val userInput = readLine().toString()
+    val randomNumber = (1..6).random()
+    //TODO: check strings
+    if(randomNumber >= 4){
+        println("You have won the game")
+    }else{
+        gameOver()
+    }
 }
 
+
 fun gameOver(){
-    println("Wrong side, winter is coming!!!")
+    println("Wrong, winter is coming!!!")
     println("You are now a member of the Army of the dead")
 }
