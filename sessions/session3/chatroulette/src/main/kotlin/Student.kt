@@ -1,4 +1,9 @@
-class Student(override val name:String): Person(name){
+class Student(override val name:String): Person(name), ChatPartner{
+    override fun talk(){
+        gossip()
+    }
+
+
     fun gossip(){
         println("eeeeuhh ik weet nie")
     }
