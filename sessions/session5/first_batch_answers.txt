@@ -1,0 +1,33 @@
+SELECT productName from products
+where productCode = 'S24_3856'
+
+answer:1956 Porsche 356A Coupe
+
+
+select AVG(buyPrice)
+From products
+
+answer: 54.395182
+
+SELECT count(productName)
+from  products
+where productName like '%ford%'
+
+answer: 15
+
+
+select MAX(buyPrice) AS MaxPrice
+from products
+
+answer: 103.42
+
+
+select count(productline) from products
+where productline like '%ship%'
+
+answer: 9
+
+
+
+
+
