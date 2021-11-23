@@ -1,9 +1,9 @@
-class Comedian(override val name:String): Person(name), ChatPartner {
-    override fun talk(){
-        joke()
+class Comedian (override val name: String) : Person(name), ChatPartner {
+    override fun talk() {
+        tellJoke()
     }
 
-    fun joke(){
-        println("ken je den mop van den duim")
+    fun tellJoke() {
+        println("People in Dubai don't like 'The Flintstones', but people in Abu Dhabi Dooo")
     }
 }

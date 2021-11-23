@@ -1,10 +1,9 @@
-open abstract class Person(open val name: String) {
-    open fun introduce(){
-    println("Hello, my name is $name")
-}
-    open fun talk(){
-
+open class Person (open val name: String) {
+    fun introduce() {
+        println("Hi! I'm $name")
     }
 
-
+    open fun talk() {
+        println("How are you doing?")
+    }
 }

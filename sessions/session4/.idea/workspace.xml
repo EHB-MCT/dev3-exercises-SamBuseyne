@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f997748e-4574-4406-aa3e-6e0fe0adf1ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../session6/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Chatbot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Chatbot.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Comedian.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Comedian.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Person.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Student.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Student.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Teacher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../session3/chatroulette/src/main/kotlin/Teacher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session5/second_batch_answers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../session5/second_batch_answers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../session6/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../session6/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="21JUGJHLrrUIZ3VuDnqDlFakqTH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../session3" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f997748e-4574-4406-aa3e-6e0fe0adf1ea" name="Changes" comment="" />
+      <created>1637658587186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637658587186</updated>
+    </task>
+    <servers />
+  </component>
+</project>

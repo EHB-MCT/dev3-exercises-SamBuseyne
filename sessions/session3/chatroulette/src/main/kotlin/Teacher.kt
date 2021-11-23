@@ -1,10 +1,9 @@
-class Teacher(override val name:String): Person(name), ChatPartner{
-
-    override fun talk(){
-        funfact()
+class Teacher (override val name: String) : Person(name), ChatPartner {
+    override fun talk() {
+        funFact()
     }
 
-    fun funfact(){
-        println("Der was eens nen hollander, nen belg en nen fransman")
+    fun funFact() {
+        println("Did you know the name Kotlin is based on an island near the coast of St. Petersburg?")
     }
 }

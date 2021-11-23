@@ -4,9 +4,9 @@ WHERE customerNumber = '328'
 answer: 3
 
 
-select count(*)
+select count(*) AS amount
 from orders
-right join customers on orders.customerNumber = customers.customerNumber
+left join customers on orders.customerNumber = customers.customerNumber
 where contactLastName = 'Young' AND customers.contactFirstName = 'Julie'
 
 answer: 3
@@ -20,9 +20,10 @@ where creditLimit = 0 AND country = 'USA'
 answer: 3
 
 
-SELECT AVG(payments.amount), customers.customerName FROM payments
-INNER JOIN customers ON payments.customerNumber = customers.customerNumber GROUP BY customers.customerNumber
-ORDER BY AVG(payments.amount) DESC LIMIT 1
+select customers.customerName, AVG(amount) as average  from customers
+inner join payments on payments.customerNumber = customers.customerNumber
+group by customers.customerNumber
+order by average DESC limit 1
 
 answer: 80375.240000, Collectable Mini Designs Co.
 

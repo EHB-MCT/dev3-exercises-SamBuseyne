@@ -1,9 +1,6 @@
-fun main(){
-
-    val persons = arrayOf(Chatbot("siri"),Student("matthias"), Student("dries"), Teacher("joachim"), Teacher("mike"), Comedian("sam"))
-    val randomPerson = persons.random()
-
-    randomPerson.introduce()
-    randomPerson.talk()
-
+fun main() {
+    val persons = arrayOf(Comedian("Philip"), Teacher("Bert"), Student("John"), Chatbot())
+    val chatMatch = persons.random()
+    chatMatch.introduce()
+    chatMatch.talk()
 }
