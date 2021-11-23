@@ -16,11 +16,18 @@ fun main() {
                 credentials.databaseName +
                 ":" + "3306" + "/" + credentials.databaseUser, connectionProps)
 
-    val statement = connection.prepareStatement("SELECT * FROM trains")
-// The result of your query will be a type ResultSet
-// This is a bit similar to collections in Kotlin
-// But since the library is based on Java, we get a type from Java
+    println("Where do you want to go")
+    val userAnswer = readLine()
+
+    val statement = connection.prepareStatement("SELECT * FROM 6_trains where city_A = '${userAnswer}' order by departure_time DESC limit 1")
     val result = statement.executeQuery()
-    println(result.toString())
+
+    while(result.next()) {
+        println(result.getString("departure_time"))
+    }
+
+
 }
+
+
 
