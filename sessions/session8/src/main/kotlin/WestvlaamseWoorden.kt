@@ -1,7 +1,2 @@
-class WestvlaamseWoorden(
-    override val original: String,
-    override val translated: String
-): Word(original, translated, "wv")
-{
-
+class WestvlaamseWoorden(override val original:String, override val translated:String):Word(original, translated, "wv", 1) {
 }

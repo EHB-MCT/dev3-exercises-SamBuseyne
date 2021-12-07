@@ -1,7 +1,2 @@
-class FrenchWord(
-    override val original: String,
-    override val translated: String
-): Word(original, translated, "fr")
-{
-
+class FrenchWord(override val original:String, override val translated:String):Word(original, translated, "fr", 1) {
 }

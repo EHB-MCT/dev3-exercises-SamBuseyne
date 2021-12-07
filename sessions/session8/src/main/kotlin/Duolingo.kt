@@ -1,21 +1,4 @@
-class Duolingo {
-
-    var roundSize: Int = 0
-    var language: String = ""
-    var level: String = ""
-
-
-    constructor(roundSize: Int = 5, language: String = "en") {
-        println("Hoevele woordn wildje per ronde?")
-        this.roundSize = readLine()!!.toInt()
-
-        println("Wukke taole kiesde? 'WestVlaams', 'English', 'Francais'")
-        this.language = readLine()!!
-
-        println("Hoe moeilijk wilde dat da spel ier is? 'Vo beginners', 'Vo die peisn daze et kunnen ', 'Vo dechte taalnerds' ")
-        this.language = readLine()!!
-    }
-
+class Duolingo (val language: String){
     val words = mutableListOf<Word>(
         WestvlaamseWoorden(original = "Stutten", translated = "Boterhammen"),
         WestvlaamseWoorden(original = "Forchette", translated = "Vork"),
@@ -35,39 +18,46 @@ class Duolingo {
         FrenchWord(original = "Pain", translated = "Brood"),
         FrenchWord(original = "Boursin", translated = "Boursin"),
     )
+    init{
+        println("Hoe moeilijk wilde dat da spel ier is? 'Vo beginners', of 'Vo dechte taalnerds' ")
+        var diff = readLine()!!.toString();
+        var size = 0;
+        if(diff =="Vo beginners"){
+            size = 5;
+        }else if (diff == "Vo dechte taalnerds"){
+            size = 10;
+        }else{
+            throw Exception("Kuje alsjeblieft een twuk verstaanbaars intikken?")
+            main();
+        }
+        var randomWords = words.shuffled().filter{it.language == language}.take(size).toMutableList();
+        play(randomWords)
+    }
 
-    fun play(){
-        if(level == "Vo beginners"){
-            var currentWords = words.filter { it.language == language }.toMutableSet()
-            currentWords = currentWords.shuffled().take(this.roundSize).toMutableSet()
-
-            while (currentWords.isNotEmpty()){
-                val selectedWord = currentWords.random()
-                println(currentWords.count())
-                println("Wuk is de vertaling van: ${selectedWord.original}")
-                val userAnswer = readLine()
-
-                if (userAnswer != selectedWord.translated) {
-                    println("Das nie juste eh! Upnieuw")
-                    currentWords.shuffled()
-                } else {
-                    currentWords.remove(selectedWord)
-                    println("Vree goed! Gemeugt verder doen door et volgende woord te vertalen")
-                }
-
+    fun play(randomWords:MutableList<Word>){
+        while(randomWords.isNotEmpty()){
+            val selectedWord = randomWords.random()
+            //Question for user
+            println("Vertaalde ke " + selectedWord.original + " int Vlams")
+            val userInput = readLine()
+            //User got answer correct
+            if(userInput == selectedWord.translated){
+                //lowers diff
+                selectedWord.diff = selectedWord.diff - 1
+                //removes word
+                randomWords.remove(selectedWord);
+                println("Vree goed! Gemeugt verder doen door et volgende woord te vertalen. Tga wa makkelijker zijn want tis nu te doen up niveau ${selectedWord.diff}")
             }
-            if(this.language == "Engels"){
-                println("Proficiat nu zieje nen echten pro, ad gaot over ${this.language} kootn")
-            }else if(this.language == "WestVlaams"){
-                println("Excellent Sire, you speak now ${this.language}")
-            }else{
-                println("Très bien, to parler ${this.language}")
+            //user got answer wrong
+            else{
+                //ups diff
+                selectedWord.diff = selectedWord.diff + 2
+                println("Das nie juste eh! Upnieuw, trouwens et juist antwoord was: ${selectedWord.translated}. Tga wa moeilijker zijn want tis nu te doen up niveau ${selectedWord.diff}")
             }
-
-        }else if(level == "Vo die peisn daze et kunnen"){
-
-        }else if(level == "Vo dechte taalnerds"){
-
+            when{
+                randomWords.count()==0 -> println("Goe bezig maot!")
+                randomWords.count()>0 -> println("Tzin der nog" + " " + randomWords.count() + " " + "te gaan")
+            }
         }
     }
 }
